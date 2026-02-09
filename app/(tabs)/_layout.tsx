@@ -86,16 +86,30 @@ const TabIcon = ({focused,icon,title}: any)=>{
 
            return (
 
-    <ImageBackground source={images.highlight} className='w-full flex justify-center flex-row p-2 min-w-[114px] gap-2 mt-4 min-h-12 items-center ' >
+         
+
+<ImageBackground source={images.highlight} className=' flex justify-center flex-row  min-w-[110px] gap-2 mt-4  items-center min-h-12 ' >
  
-                    <>
+                  
                         <Image  source={icon} className="size-5" />
                         <Text>{title}</Text>
                     
-                    </>
+                  
 
                     </ImageBackground>
 
+        
+
+        
+
+                   
+
+
+
+
+          
+
+   
   )
   }else{
 
@@ -103,8 +117,8 @@ const TabIcon = ({focused,icon,title}: any)=>{
       return (
 
         <View className="w-full flex justify-center flex-row p-2 min-w-[114px] gap-2 mt-4 min-h-12 items-center">
-              <Image source={icon}/>
-              <Text>{title}</Text>
+              <Image source={icon} className="size-5"/>
+              
         </View>
 
       )
@@ -126,11 +140,33 @@ const TabIcon = ({focused,icon,title}: any)=>{
 
     
     return (
-     <Tabs>
+     <Tabs screenOptions={{
+      tabBarShowLabel : false,
+      tabBarItemStyle : {
+        width : '100%',
+        
+        justifyContent : 'center',
+        alignItems : 'center',
+
+      },
+      tabBarStyle : {
+        backgroundColor : '#0f0D23',
+        borderRadius : 50,
+        marginHorizontal : 10,
+        marginBottom : '8%',
+        height : 40,
+        position : 'absolute',
+        overflow : 'hidden',
+        borderWidth : 0,
+        
+        borderColor : '#0f0d23',
+        
+      }
+     }} >
 
 
             <Tabs.Screen name='index' options={{
-              title : 'Home',
+  
               headerShown : true,
               tabBarIcon : ({focused})=>(
                 
@@ -140,27 +176,44 @@ const TabIcon = ({focused,icon,title}: any)=>{
             }}/>
 
 
-            <Tabs.Screen name='profile' options={{
-              title : 'My account',
-              headerShown : true,
+
+             <Tabs.Screen name='search' options={{
+      
+              headerShown : true ,
                tabBarIcon : ({focused})=>(
                 
-             <TabIcon focused={focused} icon={icons.person} title='my account'/>
+             <TabIcon focused={focused} icon={icons.search} title='Search'/>
                 
               )
             }}/>
 
 
                <Tabs.Screen name='saved' options={{
-              title : 'setting',
+        
               headerShown : true ,
                tabBarIcon : ({focused})=>(
                 
-             <TabIcon focused={focused} icon={icons.star} title='Setting'/>
+             <TabIcon focused={focused} icon={icons.save} title='saved'/>
                 
               )
             }}/>
 
+
+
+              <Tabs.Screen name='profile' options={{
+              
+              headerShown : true,
+               tabBarIcon : ({focused})=>(
+                
+             <TabIcon focused={focused} icon={icons.person} title='account'/>
+                
+              )
+            }}/>
+
+
+
+
+    
 
 
 

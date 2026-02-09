@@ -1,14 +1,14 @@
-// import { View, Text } from 'react-native'
-// import React from 'react'
+import { View, Text } from 'react-native'
+import React from 'react'
 
-// const search = () => {
-//   return (
-//     <View>
-//       <Text>search</Text>
-//     </View>
-//   )
-// }
+const search = () => {
+  return (
+    <View>
+      <Text>search</Text>
+    </View>
+  )
+}
 
-// export default search
+export default search
 
 
