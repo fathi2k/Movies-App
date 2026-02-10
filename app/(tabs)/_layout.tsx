@@ -144,7 +144,7 @@ const TabIcon = ({focused,icon,title}: any)=>{
       tabBarShowLabel : false,
       tabBarItemStyle : {
         width : '100%',
-        
+        height : '100%',
         justifyContent : 'center',
         alignItems : 'center',
 
@@ -154,7 +154,7 @@ const TabIcon = ({focused,icon,title}: any)=>{
         borderRadius : 50,
         marginHorizontal : 10,
         marginBottom : '8%',
-        height : 40,
+        height : 53,
         position : 'absolute',
         overflow : 'hidden',
         borderWidth : 0,
@@ -167,7 +167,7 @@ const TabIcon = ({focused,icon,title}: any)=>{
 
             <Tabs.Screen name='index' options={{
   
-              headerShown : true,
+              headerShown : false,
               tabBarIcon : ({focused})=>(
                 
              <TabIcon focused={focused} icon={icons.home} title='Home'/>

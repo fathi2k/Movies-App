@@ -10,6 +10,7 @@ module.exports = {
       colors : {
         biruu : '#3B7AB3',
         hijau : '#74E34D',
+        primary : '#050229'
       } ,
   },
   plugins: [],
